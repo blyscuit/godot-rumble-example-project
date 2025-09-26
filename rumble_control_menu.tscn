@@ -1,59 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bmvtb8fddpjr1"]
 
-[ext_resource path="res://rumble_control/rumble_control.tscn" type="PackedScene" id=1]
-[ext_resource path="res://rumble_control_special/rumble_control_special.tscn" type="PackedScene" id=2]
+[ext_resource type="PackedScene" path="res://rumble_control/rumble_control.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://rumble_control_special/rumble_control_special.tscn" id="2"]
 
 [node name="RumbleControlMenu" type="HBoxContainer"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = 20.0
-margin_right = -20.0
-margin_bottom = -20.0
 grow_horizontal = 2
-custom_constants/separation = 78
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Weak" parent="." instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 187.0
-margin_bottom = 560.0
+[node name="Weak" parent="." instance=ExtResource("1")]
+layout_mode = 2
 label = "Weak"
 strong_magnitude_factor = 0.0
 
-[node name="Strong" parent="." instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 265.0
-margin_top = 0.0
-margin_right = 453.0
-margin_bottom = 560.0
+[node name="Strong" parent="." instance=ExtResource("1")]
+layout_mode = 2
 label = "Strong"
 weak_magnitude_factor = 0.0
 
-[node name="Mixed" parent="." instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 531.0
-margin_top = 0.0
-margin_right = 718.0
-margin_bottom = 560.0
+[node name="Mixed" parent="." instance=ExtResource("1")]
+layout_mode = 2
 label = "Mixed"
 weak_magnitude_factor = 0.5
 strong_magnitude_factor = 0.5
 
-[node name="Rumble Control" parent="." instance=ExtResource( 2 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 796.0
-margin_top = 0.0
-margin_right = 984.0
-margin_bottom = 560.0
+[node name="Rumble Control" parent="." instance=ExtResource("2")]
+layout_mode = 2
 label = "Special "
 handheld_duration = 1000

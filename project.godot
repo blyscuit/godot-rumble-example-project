@@ -6,22 +6,13 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[ {
-"base": "Control",
-"class": "RumbleControl",
-"language": "GDScript",
-"path": "res://rumble_control/rumble_control.gd"
-} ]
-_global_script_class_icons={
-"RumbleControl": ""
-}
+config_version=5
 
 [application]
 
 config/name="Rumble Example Demo"
 run/main_scene="res://rumble_control_menu.tscn"
+config/features=PackedStringArray("4.4")
 config/icon="res://icon.png"
 
 [physics]
